@@ -1,0 +1,63 @@
+:root {
+    --background-color: white;
+}
+
+/* Start screen */
+#startscreen {
+    background-color: var(--background-color);
+    position: relative;
+}
+
+/* Header */
+#startheader {
+    display: flex;
+    background-color: rgb(50,50,50);
+    height: 15%;
+    width: 80%;
+    left: 10%;
+    top: 10%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#titlename {
+}
+
+/* Main Body (with options) */
+#mainbody {
+    background-color: rgb(62, 62, 62);
+    height: 60%;
+    width: 80%;
+    top: 10%;
+    left: 10%;
+    position: relative;
+}
+
+.mainbodybutton {
+    background-color: wheat;
+    display: flex;
+    height: 15%;
+    text-decoration: none;
+    width: 80%;
+    left: 10%;
+    top: 10%;
+    margin-bottom: 10%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#selecttimer {
+}
+
+#selectsettings {
+}
+
+/* test screen */
+#testscreen {
+    background-color: rgb(245, 245, 245);
+    height: 750px;
+    width: 350px;
+    border-radius: 25px;
+    position: relative;
+}

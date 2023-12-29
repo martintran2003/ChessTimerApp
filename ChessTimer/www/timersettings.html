@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #testscreen {
+            background-color: rgb(245, 245, 245);
+            height: 750px;
+            width: 350px;
+            border-radius: 25px;
+            position: relative;
+        }
+        #headertimersettings
+        {
+            display: flex;
+            height: 10%;
+            width: 80%;
+            left: 10%;
+            top: 5%;
+
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        #timersettings
+        {
+            position: relative;
+            width: 95%;
+            left: 5%;
+            top: 5%;
+        }
+        .timesettings
+        {
+            display: grid;
+            width: 100%;
+
+            grid-template-columns: 30% 50% 10%;
+
+
+            position: relative;
+        }
+
+    </style>
+    <script type="text/javascript" src="timersettings.js"></script>
+</head>
+<body>
+    <div id="headertimersettings">
+        <h1 id="settingsheading">Timer Settings</h1>
+    </div>
+    <div id="timersettings">
+        <form id="timersettingsform" onsubmit="submitData()" action="timer.html" method="post">
+            
+            <h2 class="timesettings">Player1: </h2>
+            <div class="timesettings" id="timesettingsplayer1">
+                <label for="hours1">Hours: </label>
+                <input type="range" id="hours1" name="hours1" min="0" max="4" value="0" oninput="changeHours1(this.value);testValid()">
+                <output id="hours1out">0</output>
+
+                <label for="minutes1">Minutes: </label>
+                <input type="range" id="minutes1" name="minutes1" min="0" max="59" value="0" oninput="changeMinutes1(this.value);testValid()">
+                <output id="minutes1out">0</output>
+
+                <label for="seconds1">Seconds: </label>
+                <input type="range" id="seconds1" name="seconds1" min="0" max="60" step="15" value="15" oninput="changeSeconds1(this.value);testValid()">
+                <output id="seconds1out">15</output>
+
+                <label for="increment1">Increment: </label>
+                <input type="checkbox" id="increment1" name="increment1">
+                <div></div>
+
+                <label for="increment1value">Increment Time (seconds):</label>
+                <input type="range" id="increment1value" name="increment1value" min="0" max="60" value="0" oninput="changeIncrement1(this.value)">
+                <output id="increment1out">0</output>
+
+
+                <label for="delay1">Delay: </label>
+                <input type="checkbox" id="delay1" name="delay1">
+                <div></div>
+
+                <label for="delay1value">Delay Time (seconds):</label>
+                <input type="range" id="delay1value" name="delay1value" min="0" max="60" value="0" oninput="changeDelay1(this.value)">
+                <output id="delay1out">0</output>
+
+
+            </div>
+
+            <h2 class="timesettings">Player 2:</h2>
+            <div class="timesettings" id="timesettingsplayer2">
+                <label for="hours2">Hours: </label>
+                <input type="range" id="hours2" name="hours2" min="0" max="4" value="0" oninput="changeHours2(this.value);testValid()">
+                <output id='hours2out'>0</output>
+
+                <label for="minutes2">Minutes: </label>
+                <input type="range" id="minutes2" name="minutes2" min="0" max="59" value="0" oninput="changeMinutes2(this.value);testValid()">
+                <output id="minutes2out">0</output>
+
+                <label for="seconds2">Seconds: </label>
+                <input type="range" id="seconds2" name="seconds2" min="0" max="60" step="15" value="15" oninput="changeSeconds2(this.value);testValid()">
+                <output id="seconds2out">15</output>
+
+                <label for="increment2">Increment: </label>
+                <input type="checkbox" id="increment2" name="increment2" min="0" max="60" step="1" value="0">
+                <div></div>
+
+                <label for="increment2value">Increment Time (seconds):</label>
+                <input type="range" id="increment2value" name="increment2value" min="0" max="60" value="0" oninput="changeIncrement2(this.value)">
+                <output id="increment2out">0</output>
+
+                <label for="delay2">Delay: </label>
+                <input type="checkbox" id="delay2" name="delay2" min="0" max="30" step="1" value="0">
+                <div></div>
+
+                <label for="delay2value">Delay Time (seconds):</label>
+                <input type="range" id="delay2value" name="delay2value" min="0" max="60" value="0" oninput="changeDelay2(this.value)">
+                <output id="delay2out">0</output>
+
+            </div>
+            <div>
+                <button type="submit">Start</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>

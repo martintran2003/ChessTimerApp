@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Start screen */
+        #startscreen {
+            background-color: var(--background-color);
+            position: relative;
+        }
+
+        /* Header */
+        #startheader {
+            display: flex;
+            background-color: rgb(50,50,50);
+            height: 15%;
+            width: 80%;
+            left: 10%;
+            top: 10%;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        #titlename {
+        }
+
+        /* Main Body (with options) */
+        #mainbody {
+            background-color: rgb(62, 62, 62);
+            height: 60%;
+            width: 80%;
+            top: 10%;
+            left: 10%;
+            position: relative;
+        }
+
+        .mainbodybutton {
+            background-color: wheat;
+            display: flex;
+            height: 15%;
+            text-decoration: none;
+            width: 80%;
+            left: 10%;
+            top: 10%;
+            margin-bottom: 10%;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* test screen */
+        #testscreen {
+            background-color: rgb(245, 245, 245);
+            height: 750px;
+            width: 350px;
+            border-radius: 25px;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body id="startscreen">
+    <div id= "testscreen">
+        <div id="startheader">
+            <h1 id="titlename">
+                Game Timer
+            </h1>
+        </div>
+        <div id="mainbody">
+            <a class="mainbodybutton" id="selecttimer" href="timersettings.html">
+                <span class="startbuttontext">2-Player Timer</span>
+            </a>
+            <a class="mainbodybutton" id="selectsettings" href="settings.html">
+                <span class="startbuttontext">Settings</span>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

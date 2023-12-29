@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html, body {
+                overflow-x: hidden;
+                overflow-y: hidden;
+                user-select: none;
+            }
+            body {
+                position: relative;
+            }
+
+            #player2side {
+                position: fixed;
+                left: 0%;
+                top: 0%;
+                background-color: rgb(33, 33, 33);
+                height: 50vh;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1;
+                color: white;
+            }
+
+            #player1side {
+                position: fixed;
+                left: 0%;
+                top: 50%;
+                background-color: rgb(228, 228, 228);
+                height: 50vh;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1;
+            }
+
+            #endscreen {
+                display: none;
+                position: fixed;
+                width: 46%;
+                left: 25%;
+                height: 36%;
+                top: 30%;
+                border-radius: 10px;
+                background-color: rgb(225,225,225);
+                z-index: 2;
+                padding: 2%;
+            }
+
+            #endmessage
+            {
+                text-align: center;
+                top: 20%;
+            }
+
+            #endbuttons
+            {
+                display: grid;
+                grid-template-columns: 100%;
+                position: relative;
+            }
+
+            .endscreenbutton
+            {
+                position: relative;
+                text-align: center;
+                font-size: 120%;
+                padding: 2%;
+                margin: 8%;
+                background-color: rgb(150,150,150);
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="player2side">
+            <h1 id="time2"></h1>
+        </div>
+        <div id="player1side">
+            <h1 id="time1"></h1>
+        </div>
+        <div id="timersettingbutton">
+        </div>
+        <div id="endscreen">
+            <h3 id="endmessage"></h3>
+            <div id="endbuttons">
+                <div id="startscreenbutton" class="endscreenbutton">To Start</div>
+                <div id="settingscreenbutton" class="endscreenbutton">To Settings</div>
+                <div id="restartbutton" class="endscreenbutton">Restart Timer</div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="timer.js"></script>
+</html>
